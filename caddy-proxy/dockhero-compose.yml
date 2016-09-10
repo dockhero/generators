@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  proxy:
+    image: dockhero/caddy-proxy
+    ports:
+      - "80:80"
+      - "80:80/udp"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - caddy_certificates:/srv
+    environment:
+      VIRTUAL_HOST: ${DOCKHERO_HOST}
+      TARGET_URL: ${HEROKU_APP_URL}
+
+volumes:
+  caddy_certificates:
+    driver: local

@@ -1,0 +1,7 @@
+version: "2"
+
+services:
+  app:
+    image: dockhero/dockhero-docs:hello
+    ports:
+      - "80:8080"
