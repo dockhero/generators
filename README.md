@@ -1,0 +1,2 @@
+# generators
+Example stack templates
