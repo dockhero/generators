@@ -18,11 +18,10 @@ Usage
 ------
 
 ```bash
-heroku dh:generate <name>
+heroku dh:generate <name>  # creates `dockhero-compose.yml`
 ```
 
-This will create `dockhero-compose.yml` with a template stack
-Review it with your editor - it may contain placeholders
+Review the stack with your editor - it may contain placeholders.
 
 Running the stack
 ------------------
@@ -39,6 +38,6 @@ Available templates
 
 | Generator   	| Description                                                   	|
 |-------------	|---------------------------------------------------------------	|
-| helloworld  	| Sample static website                                         	|
-| caddy-proxy 	| Reverse proxy with HTTP/2 and QUIC support and automatic SSL via LetsEncrypt	|
+| [helloworld](./helloworld)  	| Sample static website                                         	|
+| [caddy-proxy](./caddy-proxy) 	| Reverse proxy with HTTP/2 and QUIC support and automatic SSL via LetsEncrypt	|
 |             	|                                                               	|
