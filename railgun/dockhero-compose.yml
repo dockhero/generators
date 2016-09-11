@@ -1,0 +1,23 @@
+version: '2'
+services:
+  railgun:
+    image: whatwedo/cloudflare-railgun
+    command: sh -c "/bin/everyboot; /usr/bin/rg-listener -config=/etc/railgun/railgun.conf"
+    ports:
+      - "2408:2408"
+      - "24088:24088"
+    environment:
+      MEMCACHED_SERVERS: "memcache:11211"
+      ACTIVATION_TOKEN: ${RAILGUN_ACTIVATION_KEY}
+      ACTIVATION_RAILGUN_HOST: ${DOCKHERO_HOST}
+    volumes:
+      - firstboot:/etc/firstboot
+
+  memcache:
+    image: memcached
+    command: memcached -m 128
+
+volumes:
+  firstboot:
+    driver: local
+
