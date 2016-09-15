@@ -20,11 +20,10 @@ Running the stack
 heroku dh:compose up -d
 ```
 
-Now you should be able to open admin UI in the browser and login with
-the following credentials: `admin:<admin UI password>`
+Now you should be able to open admin UI in the browser and login with RETHINKDB_ADMIN_PASSWORD  (username is `admin`)
 
 ```
-heroku dh:open    
+heroku dh:open https    
 ```
 
 
