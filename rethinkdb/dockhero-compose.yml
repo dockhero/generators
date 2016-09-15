@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  db:
+    image: rethinkdb
+    command: rethinkdb --bind all --initial-password ${RETHINKDB_PASSWORD}
+    ports:
+      - "28015:28015"
+    volumes:
+      - rethink-data:/data
+
+  web:
+    image: keisato/nginx-basic-auth-proxy
+    environment:
+      BACKEND: "db:8080"
+      USER: "admin"
+      PASS: "${RETHINKDB_ADMIN_PASSWORD}"
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+
+volumes:
+  rethink-data:
+    driver: local
