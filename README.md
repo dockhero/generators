@@ -38,6 +38,7 @@ Available templates
 
 | Generator   	| Description                                                   	|
 |-------------	|---------------------------------------------------------------	|
-| [helloworld](./helloworld)  	| Sample static website                                         	|
 | [caddy-proxy](./caddy-proxy) 	| Reverse proxy with HTTP/2 and QUIC support and automatic SSL via LetsEncrypt	|
+| [helloworld](./helloworld)  	| Sample static website                                         	|
+| [rethinkdb](./rethinkdb) 	| RethinkDB with basic auth for admin UI	|
 |             	|                                                               	|
