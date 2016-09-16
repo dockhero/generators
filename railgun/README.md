@@ -12,7 +12,7 @@ We assume your Heroku app is already
 [configured](https://support.cloudflare.com/hc/en-us/articles/205893698-Configure-CloudFlare-and-Heroku-over-HTTPS)
 to use CloudFlare DNS and CDN features. 
 
-You'll need a *Railgun Activation Key*. Copy it from *My Subscriptions* page 
+You'll need a *Railgun Activation Key*. Copy it from your [CloudFlare Account Settings](https://www.cloudflare.com/a/account/railgun)
 and assign to `RAILGUN_ACTIVATION_KEY` Heroku config variable
 
 ![My Subscriptions page](https://monosnap.com/file/MqNeUzt8g3Qj7GjrTJFbVmfOWnJ3zp.png)
