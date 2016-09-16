@@ -1,4 +1,4 @@
-With Cloudflare's Railgun you can decrease your Heroku app’s load time across the world by 2-3 times.
+With [Cloudflare's Railgun](https://www.cloudflare.com/railgun/) you can decrease your Heroku app’s load time across the world by 2-3 times.
 
 Prerequisites
 -------------
