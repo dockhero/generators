@@ -15,12 +15,11 @@ to use CloudFlare DNS and CDN features.
 You'll need a *Railgun Activation Key*. Copy it from *My Subscriptions* page 
 and assign to `RAILGUN_ACTIVATION_KEY` Heroku config variable
 
+![My Subscriptions page](https://monosnap.com/file/MqNeUzt8g3Qj7GjrTJFbVmfOWnJ3zp.png)
+
 ```
 heroku config:set RAILGUN_ACTIVATION_KEY=xxxxxxxxx
 ```
-
-![My Subscriptions page](https://monosnap.com/file/MqNeUzt8g3Qj7GjrTJFbVmfOWnJ3zp.png)
-
 
 Running the stack
 -----------------
@@ -32,7 +31,7 @@ heroku dh:generate railgun    # this generates dockhero-compose.yml
 heroku dh:compose up -d
 ```
 
-Now you should be able to turn on Railgun for your entire Cloudflare domain.
+Now turn on Railgun for your entire Cloudflare domain.
 Click “Test” button to make sure everything works.
 
 ![Alt text](https://monosnap.com/file/omhbv2iSJK7D7xLmoQEOZRmicZuPDd.png)
