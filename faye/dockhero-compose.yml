@@ -1,0 +1,14 @@
+redis:
+  image: redis:latest
+  ports:
+    - 6379:6379
+
+faye:
+  image: nickjj/faye
+  links:
+    - redis
+  ports:
+    - 80:4242
+  environment:
+    FAYE_PUSH_TOKEN: ${FAYE_PUSH_TOKEN}
+    FAYE_MOUNT: "/"
