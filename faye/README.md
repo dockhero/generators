@@ -1,5 +1,5 @@
 Faye: Simple pub/sub messaging for the web
-===========================================
+===========================
 
 ```bash
 heroku dh:generate faye
@@ -21,11 +21,13 @@ Using with Rails
 -# application.slim
   = javascript_include_tag "#{ENV["DOCKHERO_FLEXIBLE_SSL_URL"]}/client.js"
   javascript:
-    var client = new Faye.Client('#{ENV["DOCKHERO_FLEXIBLE_SSL_URL"]}', {timeout: 120});
+    document.addEventListener("DOMContentLoaded", function() {
+      var client = new Faye.Client('#{ENV["DOCKHERO_FLEXIBLE_SSL_URL"]}', {timeout: 120});
 
-    client.subscribe('/channel', function(message) {
-      console.log('Received message: ' + JSON.stringify(message));
-    });
+      client.subscribe('/channel', function(message) {
+        console.log('Received message: ' + JSON.stringify(message));
+      });
+    })
 ```
 
 Then publish some message from your Rails console:
