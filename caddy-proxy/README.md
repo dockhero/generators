@@ -1,7 +1,7 @@
 Caddy Server reverse proxy
 ==========================
 
-At the first start it generates an SSL certificate via LetsEncrypt.
+Caddy Server is a simple yet powerful multi-purpose web server, which includes reverse proxy capability. It supports HTTP/2 and SSL (at the first start it generates an SSL certificate via LetsEncrypt).
 It also comes with QUIC experimental protocol support - see [tutorial](https://docs.dockhero.io/tutorials/caddy.html)
 
 ```bash
@@ -16,7 +16,7 @@ adjusted by setting environment variables in `dockhero-compose.yml`
 | VIRTUAL_HOST 	| ${DOCKHERO_HOST}  	| Caddy server will generate an SSL certificate for that domain          	|
 | TARGET_URL   	| ${HEROKU_APP_URL} 	| URL which receives the request 	|
 
-It's recommended to always use a volume to store SSL certificate and key
+It's recommended to always declare a volume to store SSL certificate and key
 to avoid generating the certificate every time the container starts and hitting the limits.
 
 You can see the Caddy's access.log using Heroku logs command
