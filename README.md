@@ -38,7 +38,7 @@ Available templates
 | Generator   	| Description                                                   	|
 |-------------	|---------------------------------------------------------------	|
 | [caddy-proxy](./caddy-proxy) 	| Reverse proxy with HTTP/2 and QUIC support and automatic SSL via LetsEncrypt	|
-| [faye](./faye)              	| Sample static website                                         	|
-| [helloworld](./helloworld)  	| Simple pub/sub messaging for the web                                     	|
+| [faye](./faye)              	| Simple pub/sub messaging for the web                                               	|
+| [helloworld](./helloworld)  	| Sample static website                               	|
 | [rethinkdb](./rethinkdb) 	    | RethinkDB with basic auth for admin UI	|
 | [railgun](./railgun)     	    | Use CloudFlare CDN with byte-level caching                                      	|
