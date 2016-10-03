@@ -2,7 +2,7 @@ Caddy Server reverse proxy
 ==========================
 
 At the first start it generates an SSL certificate via LetsEncrypt.
-It also comes with QUIC experimental protocol support - see [example](https://github.com/dockhero/quic-protocol-demo)
+It also comes with QUIC experimental protocol support - see [tutorial](https://docs.dockhero.io/tutorials/caddy.html)
 
 ```bash
 heroku dh:generate caddy-proxy
