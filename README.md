@@ -11,7 +11,6 @@ You'll need Dockhero add-on and CLI plugin installed
 ```bash
 heroku addons:create dockhero
 heroku plugins:install dockhero
-heroku dh:wait
 ```
 
 Usage
@@ -31,7 +30,7 @@ heroku dh:open                     # opens the stack in the browser
 heroku logs --tail -p dockhero     # watch logs
 ```
 
-See more commands in [CLI plugin docs](https://github.com/cloudcastle/dockhero-cli)
+See more commands in [Dockhero docs](https://docs.dockhero.io)
 
 Available templates
 ------------------------
@@ -39,6 +38,7 @@ Available templates
 | Generator   	| Description                                                   	|
 |-------------	|---------------------------------------------------------------	|
 | [caddy-proxy](./caddy-proxy) 	| Reverse proxy with HTTP/2 and QUIC support and automatic SSL via LetsEncrypt	|
-| [helloworld](./helloworld)  	| Sample static website                                         	|
-| [rethinkdb](./rethinkdb) 	| RethinkDB with basic auth for admin UI	|
-| [railgun](./railgun)     	| Use CloudFlare CDN with byte-level caching                                      	|
+| [faye](./faye)              	| Sample static website                                         	|
+| [helloworld](./helloworld)  	| Simple pub/sub messaging for the web                                     	|
+| [rethinkdb](./rethinkdb) 	    | RethinkDB with basic auth for admin UI	|
+| [railgun](./railgun)     	    | Use CloudFlare CDN with byte-level caching                                      	|
