@@ -10,6 +10,7 @@ services:
       MEMCACHED_SERVERS: "memcache:11211"
       ACTIVATION_TOKEN: ${RAILGUN_ACTIVATION_KEY}
       ACTIVATION_RAILGUN_HOST: ${DOCKHERO_HOST}
+    restart: "on-failure:10"
     volumes:
       - firstboot:/etc/firstboot
 
@@ -20,4 +21,3 @@ services:
 volumes:
   firstboot:
     driver: local
-

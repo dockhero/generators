@@ -5,6 +5,7 @@ redis:
 
 faye:
   image: nickjj/faye
+  restart: "on-failure:10"
   links:
     - redis
   ports:

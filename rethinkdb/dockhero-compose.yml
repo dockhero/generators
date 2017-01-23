@@ -3,6 +3,7 @@ version: '2'
 services:
   db:
     image: rethinkdb
+    restart: "on-failure:10"
     command: rethinkdb --bind all --initial-password ${RETHINKDB_PASSWORD}
     ports:
       - "28015:28015"
@@ -11,6 +12,7 @@ services:
 
   web:
     image: keisato/nginx-basic-auth-proxy
+    restart: "on-failure:10"
     environment:
       BACKEND: "db:8080"
       USER: "admin"

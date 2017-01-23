@@ -3,6 +3,7 @@ version: "2"
 services:
   proxy:
     image: dockhero/caddy-proxy
+    restart: "on-failure:10"
     ports:
       - "80:80"
       - "80:80/udp"
