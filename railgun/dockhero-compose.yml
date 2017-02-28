@@ -17,6 +17,7 @@ services:
   memcache:
     image: memcached
     command: memcached -m 128
+    restart: "on-failure:10"
 
 volumes:
   firstboot:
