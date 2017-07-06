@@ -13,7 +13,7 @@ adjusted by setting environment variables in `dockhero-compose.yml`
 
 | ENV VAR      	| DEFAULT           	| EXPLANATION                    	|
 |--------------	|-------------------	|--------------------------------	|
-| VIRTUAL_HOST 	| ${DOCKHERO_HOST}  	| Caddy server will generate an SSL certificate for that domain          	|
+| VIRTUAL_HOSTS 	| https://${DOCKHERO_HOST}  	| Caddy server will generate an SSL certificate for that domain          	|
 | TARGET_URL   	| ${HEROKU_APP_URL} 	| URL which receives the request 	|
 
 It's recommended to always declare a volume to store SSL certificate and key
