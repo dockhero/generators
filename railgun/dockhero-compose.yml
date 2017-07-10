@@ -1,11 +1,11 @@
-version: '2'
+version: '3.0'
+
 services:
   railgun:
-    image: whatwedo/cloudflare-railgun
+    image: dockhero/cloudflare-railgun
     command: sh -c "/bin/everyboot; /usr/bin/rg-listener -config=/etc/railgun/railgun.conf"
     ports:
       - "2408:2408"
-      - "24088:24088"
     environment:
       MEMCACHED_SERVERS: "memcache:11211"
       ACTIVATION_TOKEN: ${RAILGUN_ACTIVATION_KEY}
@@ -15,7 +15,7 @@ services:
       - firstboot:/etc/firstboot
 
   memcache:
-    image: memcached
+    image: dockhero/memcached
     command: memcached -m 128
     restart: "on-failure:10"
 
