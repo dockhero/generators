@@ -1,4 +1,4 @@
-version: '3.0'
+version: '3'
 
 services:
   railgun:
@@ -11,6 +11,8 @@ services:
       ACTIVATION_TOKEN: ${RAILGUN_ACTIVATION_KEY}
       ACTIVATION_RAILGUN_HOST: ${DOCKHERO_HOST}
     restart: "on-failure:10"
+    depends_on:
+      - memcache
     volumes:
       - firstboot:/etc/firstboot
 
